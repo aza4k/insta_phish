@@ -1,18 +1,18 @@
 {
     "builds": [
         {
-            "src": "backend/wsgi.py",
+            "src": "insta_project/wsgi.py",
             "use": "@vercel/python",
             "config": {
                 "maxLambdaSize": "50mb"
             }
         }
     ],
-    "buildCommand": "pip install --upgrade openai && pip install -r requirements.txt",
+    "buildCommand": "pip install -r requirements.txt",
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "backend/wsgi.py"
+            "dest": "insta_project/wsgi.py"
         }
     ]
 }
